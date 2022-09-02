@@ -25,7 +25,7 @@ public class AddEventServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String name = req.getParameter("name");
         String place = req.getParameter("place");
         boolean isOnline = Boolean.parseBoolean(req.getParameter("isOnline"));
@@ -47,6 +47,7 @@ public class AddEventServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        assert event != null;
         eventManager.addEvent(event);
         resp.sendRedirect("/events");
     }

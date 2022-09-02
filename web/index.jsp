@@ -13,6 +13,9 @@
     <br>
     <a href="/event/add">Add event</a>
     <br>
+    <a href="/users">Show all users</a>
+    <br>
+    <a href="/user/add">Add user</a>
 
 </main>
 

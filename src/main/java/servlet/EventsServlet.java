@@ -22,4 +22,5 @@ public class EventsServlet extends HttpServlet {
         req.setAttribute("events", eventList);
         req.getRequestDispatcher("/WEB-INF/events.jsp").forward(req, resp);
     }
+
 }
